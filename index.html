@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goit-markup-hw-05</title>
+    <title>goit-markup-hw-06</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -473,8 +473,40 @@
             <use href="./images/icons.svg#icon-close-modal"></use>
           </svg>
         </button>
+        <form class="modal-form" autocomplete="off">
+          <label class="form-label"
+            ><span class="label-text">Имя</span>
+
+            <input class="form-input" type="text" name="user-name" />
+          </label>
+          <label class="form-label"
+            ><span class="label-text">Телефон</span>
+
+            <input class="form-input" type="tel" name="user-tel" />
+          </label>
+          <label class="form-label"
+            ><span class="label-text">Почта</span>
+
+            <input class="form-input" type="email" name="user-mail" />
+          </label>
+          <label class="label-textarea"
+            ><span class="label-text">Комментарий </span>
+            <textarea
+              class="form-textarea"
+              name="user-comment"
+              placeholder="Введите текст"
+            >
+            </textarea>
+          </label>
+          <label class="form-label">
+            <input type="checkbox" name="policy" />
+            Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
+          </label>
+          <button type="submit">Отправить</button>
+        </form>
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>

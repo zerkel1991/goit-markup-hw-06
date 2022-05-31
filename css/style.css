@@ -639,7 +639,6 @@ ul {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
-  padding: 40px;
   opacity: 1;
   visibility: visible;
   background-color: #ffffff;
@@ -649,6 +648,8 @@ ul {
   width: 30px;
   height: 30px;
   margin-left: auto;
+  margin-top: 8px;
+  margin-right: 8px;
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
@@ -672,4 +673,44 @@ ul {
 .modal-button:hover .icon-modal,
 .modal-button:focus .icon-modal {
   fill: #ffff;
+}
+.textarea {
+  resize: none;
+}
+
+.modal-form {
+  padding: 40px;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  width: 448px;
+  margin-bottom: 10px;
+}
+textarea {
+  resize: none;
+}
+.label-textarea {
+  display: flex;
+  flex-direction: column;
+  width: 448px;
+  margin-bottom: 20px;
+}
+.form-textarea {
+  width: 448px;
+  height: 96px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.label-text {
+  display: block;
+  color: rgba(117, 117, 117, 1);
+  margin-bottom: 4px;
+}
+.form-input {
+  padding: 14px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
