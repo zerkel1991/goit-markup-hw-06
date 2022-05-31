@@ -492,9 +492,11 @@ ul {
 .footer-join .icon-team {
   fill: #ffff;
 }
-.Footer-form {
-  width: 570px;
+.Footer-form-container {
   margin-left: 93px;
+}
+.footer-form {
+  display: flex;
 }
 .footer-form-title {
   font-family: inherit;
@@ -525,7 +527,6 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
   color: white;
   font-size: 16px;
   font-weight: 700;
