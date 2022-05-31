@@ -294,14 +294,7 @@ ul {
 .section-list-item {
   position: relative;
 }
-/* .section-list-item::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 70px;
-  bottom: 0;
-  background: rgba(47, 48, 58, 0.8);
-} */
+
 .our-business {
   display: flex;
   position: absolute;
@@ -318,7 +311,6 @@ ul {
   margin: 0 auto;
   font-size: 14px;
   text-transform: uppercase;
-  line-height: 1.1;
 }
 
 .img {
@@ -384,7 +376,9 @@ ul {
   outline-style: none;
   border-style: none;
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-socials:hover,
 .link-socials:focus {
@@ -403,9 +397,6 @@ ul {
 }
 .icon-team {
   fill: #afb1b8;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list {
@@ -607,6 +598,7 @@ ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .filter-list-item {
   transition-property: box-shadow;
   transition-duration: 250ms;
@@ -625,10 +617,7 @@ ul {
 .contact-link:focus {
   color: var(--brandblue);
 }
-/* .contact-link:hover > .contact-icon,
-.contact-link:focus > .contact-icon {
-  fill: var(--brandblue);
-} */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -636,19 +625,12 @@ ul {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  opacity: 1;
-  transition-property: opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
-  visibility: hidden;
   opacity: 0;
   pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-  opacity: 0;
 }
 .modal {
   position: absolute;
@@ -657,12 +639,10 @@ ul {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
-  padding: 8px;
-  background-color: #ffffff;
+  padding: 40px;
   opacity: 1;
   visibility: visible;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #ffffff;
 }
 .modal-button {
   display: flex;
