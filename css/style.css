@@ -492,6 +492,67 @@ ul {
 .footer-join .icon-team {
   fill: #ffff;
 }
+.Footer-form {
+  width: 570px;
+  margin-left: 93px;
+}
+.footer-form-title {
+  font-family: inherit;
+  display: flex;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer-label {
+  display: flex;
+}
+.footer-input {
+  display: block;
+  margin-right: 12px;
+  width: 358px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+.footer-label input::placeholder {
+  color: #eee;
+}
+.label-button {
+  position: relative;
+  background-color: #2196f3;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-text {
+  padding: 10px 62px 10px 29px;
+}
+
+.label-button:hover,
+.label-button:focus {
+  background-color: #188ce8;
+}
+.footer-button-icon {
+  position: absolute;
+  top: 13px;
+  right: 28px;
+  fill: #ffff;
+}
+
 /* Кнопки фильтра */
 .filter {
   font-family: inherit;
@@ -638,20 +699,21 @@ ul {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 528px;
-  height: 581px;
+  /* height: 581px; */
   opacity: 1;
   visibility: visible;
   background-color: #ffffff;
 }
 .modal-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   display: flex;
   width: 30px;
   height: 30px;
-  margin-left: auto;
-  margin-top: 8px;
-  margin-right: 8px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   background-color: #ffffff;
   border-radius: 50%;
   border-color: rgba(0, 0, 0, 0.1);
@@ -681,8 +743,17 @@ ul {
 .modal-form {
   padding: 40px;
 }
-
+.form-title {
+  display: flex;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  justify-content: center;
+}
 .form-label {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 448px;
@@ -699,18 +770,106 @@ textarea {
 }
 .form-textarea {
   width: 448px;
-  height: 96px;
+  height: 120px;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .label-text {
   display: block;
   color: rgba(117, 117, 117, 1);
   margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.1;
+  text-align: left;
+  letter-spacing: 0.01em;
 }
 .form-input {
   padding: 14px;
+  padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.label-icon {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-label:hover .form-input,
+.form-label:focus .form-input {
+  border-color: var(--brandblue);
+}
+
+.form-label:hover .label-icon,
+.form-label:focus .label-icon {
+  fill: var(--brandblue);
+}
+.label-textarea:hover .form-textarea,
+.label-textarea:focus .form-textarea {
+  border-color: var(--brandblue);
+}
+.label-checkbox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.checkbox {
+  appearance: none;
+  position: absolute;
+}
+.checkbox-icon {
+  border-radius: 2px;
+  border: 2px solid #212121;
+  fill: #ffff;
+  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox:checked + .checkbox-icon {
+  fill: #ffff;
+  background-color: #2196f3;
+  border-radius: 2px;
+  border: none;
+}
+
+.checkbox-text {
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: left;
+  letter-spacing: 0.03em;
+  color: rgba(117, 117, 117, 1);
+}
+.checkbox-link {
+  text-decoration: underline;
+  color: #2196f3;
+}
+.modal-button-submit {
+  background-color: #2196f3;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-button-submit:hover,
+.modal-button-submit:focus {
+  background-color: #188ce8;
 }
