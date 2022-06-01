@@ -702,9 +702,8 @@ ul {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 528px;
-  max-height: 586px;
+  max-height: 581px;
   padding: 40px;
-  /* height: 581px; */
   opacity: 1;
   visibility: visible;
   background-color: #ffffff;
@@ -798,7 +797,7 @@ textarea {
   position: absolute;
   bottom: 14px;
   left: 14px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .form-label:hover .form-input,
@@ -807,9 +806,10 @@ textarea {
 }
 
 .form-label:hover .label-icon,
-.form-label:focus .label-icon {
+.form-input:focus + .label-icon {
   fill: var(--brandblue);
 }
+
 .label-textarea:hover .form-textarea,
 .label-textarea:focus .form-textarea {
   border-color: var(--brandblue);
@@ -834,6 +834,19 @@ textarea {
 .checkbox {
   appearance: none;
   position: absolute;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.checkbox:focus + .checkbox-icon {
+  border-color: #188ce8;
 }
 .checkbox-icon {
   border-radius: 2px;
